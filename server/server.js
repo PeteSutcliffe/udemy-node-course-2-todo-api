@@ -1,3 +1,5 @@
+require('./config/config');
+
 let express = require('express');
 let bodyParser = require('body-parser');
 let {ObjectID} = require('mongodb');
@@ -9,7 +11,7 @@ let {User} = require('./models/user');
 
 let app = express();
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT;
 
 app.use(bodyParser.json());
 
